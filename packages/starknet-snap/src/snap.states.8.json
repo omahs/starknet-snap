@@ -1,0 +1,359 @@
+{
+  "accContracts": [
+    {
+      "addressSalt": "0x795d62a9896b221af17bedd8cceb8d963ac6864857d7476e2f8c03ba0c5df9",
+      "publicKey": "0x795d62a9896b221af17bedd8cceb8d963ac6864857d7476e2f8c03ba0c5df9",
+      "address": "0x5ccc9fc2d7ce9e2b0f2cee1a4b898570bb4d03ba23ad6f72f0db971bd04552c",
+      "addressIndex": 0,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "addressSalt": "0x013b2286f46b257f3bcfa2e7d5d9c1e736f48704de39d26095af842746663058",
+      "publicKey": "0x13b2286f46b257f3bcfa2e7d5d9c1e736f48704de39d26095af842746663058",
+      "address": "0x14361d05e560796ad3152e083b609f5205f3bd76039327326746ba7f769a666",
+      "addressIndex": 1,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "addressSalt": "0x0797efd8e3971dfca4f928485860896201320ce2997ca4789d9343204219599d",
+      "publicKey": "0x797efd8e3971dfca4f928485860896201320ce2997ca4789d9343204219599d",
+      "address": "0x128a26755280f0bf9bb3a3fc4948ee54e00142761eeef8c5cea5890ad49a96b",
+      "addressIndex": 2,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "addressSalt": "0x0110e50179b0ef539fd1558571698a98cfe90d6829ff8203bfe577fdda6fc44e",
+      "publicKey": "0x110e50179b0ef539fd1558571698a98cfe90d6829ff8203bfe577fdda6fc44e",
+      "address": "0x5a98ec74a40383cf99896bfea2ec5e6aad16c7eed50025a5f569d585ebb13a2",
+      "addressIndex": 3,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "addressSalt": "0x077cd466c781bcbbbb82e56d06a51d3ce137de74e43dae1df456bb867963c86a",
+      "publicKey": "0x77cd466c781bcbbbb82e56d06a51d3ce137de74e43dae1df456bb867963c86a",
+      "address": "0x597c8cc642e764a9c0c8758e0e69f16a2072c5a2c7e62d5b591ec36a6f68e89",
+      "addressIndex": 4,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "addressSalt": "0x06729eefa66501282721df168b29b8aaf8f7835a38785297960c0c7f722deba2",
+      "publicKey": "0x6729eefa66501282721df168b29b8aaf8f7835a38785297960c0c7f722deba2",
+      "address": "0x6b686ebe2cbd70b37b54df1b9889cc3095b55f386110843912efcaed416ff3f",
+      "addressIndex": 5,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "addressSalt": "0x6a677fd1c193bb5ac2f7965148590336efc6d0d25b4fafef25dd71257f8edb",
+      "publicKey": "",
+      "address": "0x67669da8f43611602703ae3434a7b1223f1535d36c277da3caa87cd3ad1aa34",
+      "addressIndex": 6,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "addressSalt": "0x0473d8732cf35026a7f16537277aa4a0d7697a88be37c9fbcff8e5a28b331105",
+      "publicKey": "",
+      "address": "0x556c3dd1411d17bfdf97ad1c36a26c663cc2e898f7e7c3397e72fad36515515",
+      "addressIndex": 7,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "addressSalt": "0x6a677fd1c193bb5ac2f7965148590336efc6d0d25b4fafef25dd71257f8edb",
+      "publicKey": "0x0",
+      "address": "0x115c2a2ba4bf2be702eb7b669797d198a01a73ea39c6cc8c0d7d190266d963c",
+      "addressIndex": 6,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "0x50b3077a6bda3f30af99e56027f6c3fffe384521501c7e11994c6e89173a45",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x0473d8732cf35026a7f16537277aa4a0d7697a88be37c9fbcff8e5a28b331105",
+      "publicKey": "",
+      "address": "0x25b34ec70926edf7d748d0ae2bc16da0a53a3827d298fed4a8739fe2e2d8d0e",
+      "addressIndex": 7,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x02e5d7909bb31b7f8927da00ca28c4166e9982a3bb362a323030c9c6cffaded2",
+      "publicKey": "",
+      "address": "0x7ca966ea3fa39ab6623c2143163f4f3f3e20f90de03f9c3f629396196ae7a0e",
+      "addressIndex": 8,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x07676af503065c5ab714c1b49832d7d4a1216b04f7b0b3114a116f71b987574b",
+      "publicKey": "",
+      "address": "0x71b2567107f6a6763ccfd845dd31e04264921196c5c38c3d0dc13bc8c5e9853",
+      "addressIndex": 9,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x0545cf6b47a8f918f3d4bc47ba9244bca4438e33c1848a8c4bb60a35dc89a306",
+      "publicKey": "",
+      "address": "0x71bd7f2f3e8e8690380adae6637c808209a8bb854cec998b05d10d3e17ff690",
+      "addressIndex": 10,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x795d62a9896b221af17bedd8cceb8d963ac6864857d7476e2f8c03ba0c5df9",
+      "publicKey": "0x795d62a9896b221af17bedd8cceb8d963ac6864857d7476e2f8c03ba0c5df9",
+      "address": "0x47dea2843decd1aa28d47df5a535a7f6ab92904cca25eda560d32021164a590",
+      "addressIndex": 0,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x013b2286f46b257f3bcfa2e7d5d9c1e736f48704de39d26095af842746663058",
+      "publicKey": "0x13b2286f46b257f3bcfa2e7d5d9c1e736f48704de39d26095af842746663058",
+      "address": "0x171073c22d07b5bc5b2f4e349c0b7ed631c5dfc7d7bbb36daf730c2bddad450",
+      "addressIndex": 1,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x0797efd8e3971dfca4f928485860896201320ce2997ca4789d9343204219599d",
+      "publicKey": "0x797efd8e3971dfca4f928485860896201320ce2997ca4789d9343204219599d",
+      "address": "0x63783954852a175191aa2da9c83c7268ce2b3450de8e697b1ff953145179a46",
+      "addressIndex": 2,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x0110e50179b0ef539fd1558571698a98cfe90d6829ff8203bfe577fdda6fc44e",
+      "publicKey": "0x110e50179b0ef539fd1558571698a98cfe90d6829ff8203bfe577fdda6fc44e",
+      "address": "0x51873afe9004e494501750b6e1450f0a7425be9fcbefe1d3cd2344c65b647c",
+      "addressIndex": 3,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x077cd466c781bcbbbb82e56d06a51d3ce137de74e43dae1df456bb867963c86a",
+      "publicKey": "0x0",
+      "address": "0x281c0ff2e4a46d0d11a8d1c6801683ca019b8f9a8d71b6b0623e23c30a93606",
+      "addressIndex": 4,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "0x75f00e3bac92f1b0cd66ee10345788374de419d99c450d4d55ec6ff8e086abc",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x06729eefa66501282721df168b29b8aaf8f7835a38785297960c0c7f722deba2",
+      "publicKey": "",
+      "address": "0x4471a868c9a810be540d8f47e1ce04501fd5c6f73b18c2bb01f77e2d49f138c",
+      "addressIndex": 5,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x077cd466c781bcbbbb82e56d06a51d3ce137de74e43dae1df456bb867963c86a",
+      "publicKey": "0x077cd466c781bcbbbb82e56d06a51d3ce137de74e43dae1df456bb867963c86a",
+      "address": "0x597c8cc642e764a9c0c8758e0e69f16a2072c5a2c7e62d5b591ec36a6f68e89",
+      "addressIndex": 4,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "0x39b4ae859a119408af03d42f1f2c4fc0fbb051b0e69bcf7e3cb56f053e55d87",
+      "chainId": "0x534e5f4d41494e"
+    }
+  ],
+  "erc20Tokens": [
+    {
+      "address": "0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+      "name": "Ether",
+      "symbol": "ETH",
+      "image": "https://dv3jj1unlp2jl.cloudfront.net/128/color/eth.png",
+      "decimals": 18,
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "address": "0x00da114221cb83fa859dbdb4c44beeaa0bb37c7537ad5ae66fe5e0efd20e6eb3",
+      "name": "DAI",
+      "symbol": "DAI",
+      "image": "https://dv3jj1unlp2jl.cloudfront.net/128/color/dai.png",
+      "decimals": 18,
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "address": "0x06a09ccb1caaecf3d9683efe335a667b2169a409d19c589ba1eb771cd210af75",
+      "name": "Test Token",
+      "symbol": "TEST",
+      "image": "",
+      "decimals": 18,
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "address": "0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+      "name": "Ether",
+      "symbol": "ETH",
+      "image": "https://dv3jj1unlp2jl.cloudfront.net/128/color/eth.png",
+      "decimals": 18,
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "address": "0x03e85bfbb8e2a42b7bead9e88e9a1b19dbccf661471061807292120462396ec9",
+      "name": "DAI",
+      "symbol": "DAI",
+      "image": "https://dv3jj1unlp2jl.cloudfront.net/128/color/dai.png",
+      "decimals": 18,
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "address": "0x12d537dc323c439dc65c976fad242d5610d27cfb5f31689a0a319b8be7f3d56",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "image": "https://dv3jj1unlp2jl.cloudfront.net/128/color/wbtc.png",
+      "decimals": 8,
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "address": "0x005a643907b9a4bc6a55e9069c4fd5fd1f5c79a22470690f75556c4736e34426",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "image": "https://dv3jj1unlp2jl.cloudfront.net/128/color/usdc.png",
+      "decimals": 6,
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "address": "0x386e8d061177f19b3b485c20e31137e6f6bc497cc635ccdfcab96fadf5add6a",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "image": "https://dv3jj1unlp2jl.cloudfront.net/128/color/usdt.png",
+      "decimals": 6,
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "address": "0x07394cbe418daa16e42b87ba67372d4ab4a5df0b05c6e554d158458ce245bc10",
+      "name": "Test Token",
+      "symbol": "TEST",
+      "image": "",
+      "decimals": 18,
+      "chainId": "0x534e5f474f45524c49"
+    }
+  ],
+  "networks": [
+    {
+      "name": "Ethereum Mainnet",
+      "chainId": "0x534e5f4d41494e",
+      "rpcUrl": "https://alpha-mainnet.starknet.io",
+      "voyagerUrl": "https://voyager.online",
+      "accountImplementation": "",
+      "accountClassHash": "0x3e327de1c40540b98d05cbcb13552008e36f0ec8d61d46956d2f9752c294328"
+    },
+    {
+      "name": "Goerli Testnet",
+      "chainId": "0x534e5f474f45524c49",
+      "rpcUrl": "https://alpha4.starknet.io",
+      "voyagerUrl": "https://goerli.voyager.online",
+      "accountImplementation": "",
+      "accountClassHash": "0x3e327de1c40540b98d05cbcb13552008e36f0ec8d61d46956d2f9752c294328"
+    }
+  ],
+  "transactions": [
+    {
+      "txnHash": "0x768a4737e908ceaa08bcfd814e6ed45baf9495906b2e309b48c481a4f90086b",
+      "txnType": "invoke",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "0x6b686ebe2cbd70b37b54df1b9889cc3095b55f386110843912efcaed416ff3f",
+      "contractAddress": "0x07394cbe418daa16e42b87ba67372d4ab4a5df0b05c6e554d158458ce245bc10",
+      "contractFuncName": "transfer",
+      "contractCallData": [
+        "0x5a98ec74a40383cf99896bfea2ec5e6aad16c7eed50025a5f569d585ebb13a2",
+        "0x38d7ea4c68000",
+        "0x0"
+      ],
+      "status": "REJECTED",
+      "failureReason": "Actual fee exceeded max fee.\n15571879925657 > 12657085323819",
+      "eventIds": [],
+      "timestamp": 1655393552
+    },
+    {
+      "txnHash": "0x256c6d0ebe6e939ec536ff7c64afb778d8318e347352a8e82fed386337891d7",
+      "txnType": "invoke",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "0x6b686ebe2cbd70b37b54df1b9889cc3095b55f386110843912efcaed416ff3f",
+      "contractAddress": "0x07394cbe418daa16e42b87ba67372d4ab4a5df0b05c6e554d158458ce245bc10",
+      "contractFuncName": "transfer",
+      "contractCallData": [
+        "0x597c8cc642e764a9c0c8758e0e69f16a2072c5a2c7e62d5b591ec36a6f68e89",
+        "0xe35fa931a0000",
+        "0x0"
+      ],
+      "status": "REJECTED",
+      "failureReason": "Error at pc=0:12:\nGot an exception while executing a hint.\nCairo traceback (most recent call last):\nUnknown location (pc=0:161)\nUnknown location (pc=0:147)\n\nError in the called contract (0x6b686ebe2cbd70b37b54df1b9889cc3095b55f386110843912efcaed416ff3f):\nError at pc=0:39:\nGot an exception while executing a hint.\nCairo traceback (most recent call last):\nUnknown location (pc=0:802)\nUnknown location (pc=0:753)\nUnknown location (pc=0:1745)\n\nError in the called contract (0x7394cbe418daa16e42b87ba67372d4ab4a5df0b05c6e554d158458ce245bc10):\nError at pc=0:6:\nGot an exception while executing a hint.\nCairo traceback (most recent call last):\nUnknown location (pc=0:795)\nUnknown location (pc=0:772)\nUnknown location (pc=0:1232)\n\nTraceback (most recent call last):\n  File \"<hint0>\", line 3, in <module>\nAssertionError: assert_not_zero failed: 0 = 0.",
+      "eventIds": [],
+      "timestamp": 1655393845
+    },
+    {
+      "txnHash": "0x4a59338914c30d14141eb4e9f6a7a3ec0191a1525a140063cc21e5c551fd9d1",
+      "txnType": "invoke",
+      "chainId": "0x534e5f4d41494e",
+      "senderAddress": "0x51873afe9004e494501750b6e1450f0a7425be9fcbefe1d3cd2344c65b647c",
+      "contractAddress": "0x06a09ccb1caaecf3d9683efe335a667b2169a409d19c589ba1eb771cd210af75",
+      "contractFuncName": "transfer",
+      "contractCallData": [
+        "0x171073c22d07b5bc5b2f4e349c0b7ed631c5dfc7d7bbb36daf730c2bddad450",
+        "0xde0b6b3a7640000",
+        "0x0"
+      ],
+      "status": "REJECTED",
+      "failureReason": "Actual fee exceeded max fee.\n502830829134070 > 483862337691514",
+      "eventIds": [],
+      "timestamp": 1655399441
+    },
+    {
+      "txnHash": "0x15e0433150e71b94ba426744b8b972be29797d62a33c5c705eddc20b0306a34",
+      "txnType": "invoke",
+      "chainId": "0x534e5f4d41494e",
+      "senderAddress": "0x51873afe9004e494501750b6e1450f0a7425be9fcbefe1d3cd2344c65b647c",
+      "contractAddress": "0x06a09ccb1caaecf3d9683efe335a667b2169a409d19c589ba1eb771cd210af75",
+      "contractFuncName": "transfer",
+      "contractCallData": [
+        "0x171073c22d07b5bc5b2f4e349c0b7ed631c5dfc7d7bbb36daf730c2bddad450",
+        "0xde0b6b3a7640000",
+        "0x0"
+      ],
+      "status": "REJECTED",
+      "failureReason": "(500, {'code': <StarknetErrorCode.TRANSACTION_FAILED: 39>, 'message': 'Error at pc=0:104:\\nGot an exception while executing a hint.\\nCairo traceback (most recent call last):\\nUnknown location (pc=0:1678)\\nUnknown location (pc=0:1664)\\n\\nError in the called contract (0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7):\\nError at pc=0:6:\\nGot an exception while executing a hint.\\nCairo traceback (most recent call last):\\nUnknown location (pc=0:1238)\\nUnknown location (pc=0:1215)\\nUnknown location (pc=0:836)\\n\\nTraceback (most recent call last):\\n  File \"<hint0>\", line 3, in <module>\\nAssertionError: assert_not_zero failed: 0 = 0.'})",
+      "eventIds": [],
+      "timestamp": 1655399621
+    },
+    {
+      "txnHash": "0x39b4ae859a119408af03d42f1f2c4fc0fbb051b0e69bcf7e3cb56f053e55d87",
+      "txnType": "deploy",
+      "chainId": "0x534e5f4d41494e",
+      "senderAddress": "0x597c8cc642e764a9c0c8758e0e69f16a2072c5a2c7e62d5b591ec36a6f68e89",
+      "contractAddress": "0x597c8cc642e764a9c0c8758e0e69f16a2072c5a2c7e62d5b591ec36a6f68e89",
+      "contractFuncName": "",
+      "contractCallData": [],
+      "status": "PENDING",
+      "failureReason": "",
+      "eventIds": [],
+      "timestamp": 1655439105
+    }
+  ]
+}

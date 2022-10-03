@@ -1,0 +1,29 @@
+{
+    "method": "starknet_addInvokeTransaction",
+    "jsonrpc": "2.0",
+    "params": [
+        {
+            "contract_address": "0x5ccc9fc2d7ce9e2b0f2cee1a4b898570bb4d03ba23ad6f72f0db971bd04552c",
+            "entry_point_selector": "0x15d40a3d6ca2ac30f4031e42be28da9b056fef9bb7357ac5e85627ee876e5ad",
+            "calldata": [
+                "0x1",
+                "0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+                "0x83afd3f4caedc6eebf44246fe54e38c95e3179a5ec9ea81740eca5b482d12e",
+                "0x0",
+                "0x3",
+                "0x3",
+                "0x6b686ebe2cbd70b37b54df1b9889cc3095b55f386110843912efcaed416ff3f",
+                "0x110d9316ec000",
+                "0x0",
+                "0x69"
+            ]
+        },
+        [
+            "21001844991030175365133170291216105141700380167260116305661129260914714891",
+            "2305330008187018542822650155893066643176227515655245612491136292918477440294"
+        ],
+        "0xdc4157c6d1e",
+        "0x0"
+    ],
+    "id": 0
+}

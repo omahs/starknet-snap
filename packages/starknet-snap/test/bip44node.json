@@ -1,0 +1,11 @@
+{
+    "depth": 2,
+    "masterFingerprint": 602171449,
+    "parentFingerprint": 19799751,
+    "index": 2147492652,
+    "privateKey": "087b0b426d9e384ffa0afd34c6b234939843a436d041c27e004f7b8812de208b",
+    "publicKey": "04a9fd601c06b734f68491290e6a099506cb8f852cfebcb14ce69e30c0d4787a5416185f8ce3ad20ffbca60f2b8858e62ffcac2e3a60d67b44ab76c078736bb7f1",
+    "chainCode": "d5e9ed0ab549ddcf6aa8e2acedb2a120d1979673630b3d1df4107cd392532895",
+    "coin_type": 9004,
+    "path": "m / bip32:44' / bip32:9004'"
+}

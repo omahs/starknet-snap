@@ -15,6 +15,10 @@ import {
   MAXIMUM_TOKEN_SYMBOL_LENGTH,
   PRELOADED_NETWORKS,
   PRELOADED_TOKENS,
+  // FEEDER_GATEWAY_CALL_CONTRACT_URL_SUFFIX,
+  // FEEDER_GATEWAY_ESTIMATE_FEE_URL_SUFFIX,
+  // GATEWAY_ADD_TRANSACTION_URL_SUFFIX,
+  // FEEDER_GATEWAY_GET_TRANSACTION_STATUS_URL_SUFFIX,
   STARKNET_TESTNET_NETWORK,
   VOYAGER_API_TXNS_URL_SUFFIX,
   VOYAGER_API_TXN_URL_SUFFIX,
@@ -345,6 +349,22 @@ export function getNetworkFromChainId(state: SnapState, targerChainId: string | 
 export function getChainIdHex(network: Network) {
   return `0x${Number(network.chainId).toString(16)}`;
 }
+
+// export function getCallContractUrl(network: Network) {
+//   return `${network.baseUrl}${FEEDER_GATEWAY_CALL_CONTRACT_URL_SUFFIX}`;
+// }
+
+// export function getEstimateFeeUrl(network: Network) {
+//   return `${network.baseUrl}${FEEDER_GATEWAY_ESTIMATE_FEE_URL_SUFFIX}`;
+// }
+
+// export function getAddTransactionUrl(network: Network) {
+//   return `${network.baseUrl}${GATEWAY_ADD_TRANSACTION_URL_SUFFIX}`;
+// }
+
+// export function getTransactionStatusUrl(network: Network) {
+//   return `${network.baseUrl}${FEEDER_GATEWAY_GET_TRANSACTION_STATUS_URL_SUFFIX}`;
+// }
 
 export function getTransactionFromVoyagerUrl(network: Network) {
   return `${network.voyagerUrl}${VOYAGER_API_TXN_URL_SUFFIX}`;

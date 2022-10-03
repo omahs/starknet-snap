@@ -1,0 +1,233 @@
+{
+  "accContracts": [
+    {
+      "addressSalt": "0x795d62a9896b221af17bedd8cceb8d963ac6864857d7476e2f8c03ba0c5df9",
+      "publicKey": "0x795d62a9896b221af17bedd8cceb8d963ac6864857d7476e2f8c03ba0c5df9",
+      "address": "0x47dea2843decd1aa28d47df5a535a7f6ab92904cca25eda560d32021164a590",
+      "addressIndex": 0,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x013b2286f46b257f3bcfa2e7d5d9c1e736f48704de39d26095af842746663058",
+      "publicKey": "0x0",
+      "address": "0x171073c22d07b5bc5b2f4e349c0b7ed631c5dfc7d7bbb36daf730c2bddad450",
+      "addressIndex": 1,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "0x3a33625b05da00cf7f6d5e9aa19e7070595c0179dd785c3a20efb6677553d79",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x0797efd8e3971dfca4f928485860896201320ce2997ca4789d9343204219599d",
+      "publicKey": "",
+      "address": "0x63783954852a175191aa2da9c83c7268ce2b3450de8e697b1ff953145179a46",
+      "addressIndex": 2,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x0110e50179b0ef539fd1558571698a98cfe90d6829ff8203bfe577fdda6fc44e",
+      "publicKey": "",
+      "address": "0x51873afe9004e494501750b6e1450f0a7425be9fcbefe1d3cd2344c65b647c",
+      "addressIndex": 3,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x795d62a9896b221af17bedd8cceb8d963ac6864857d7476e2f8c03ba0c5df9",
+      "publicKey": "0x795d62a9896b221af17bedd8cceb8d963ac6864857d7476e2f8c03ba0c5df9",
+      "address": "0x5ccc9fc2d7ce9e2b0f2cee1a4b898570bb4d03ba23ad6f72f0db971bd04552c",
+      "addressIndex": 0,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "0x40a693f71f1e9d384e178dbafe5d1d99ccbc6b8fe64b49986a70058c6b68983",
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "addressSalt": "0x013b2286f46b257f3bcfa2e7d5d9c1e736f48704de39d26095af842746663058",
+      "publicKey": "0x013b2286f46b257f3bcfa2e7d5d9c1e736f48704de39d26095af842746663058",
+      "address": "0x14361d05e560796ad3152e083b609f5205f3bd76039327326746ba7f769a666",
+      "addressIndex": 1,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "0x6fc84f6d617f9f31e6acf117d1450ca7a6c1d6e5bc1fd3d10e6e01542391cb7",
+      "chainId": "0x534e5f474f45524c49"
+    }
+  ],
+  "erc20Tokens": [],
+  "networks": [
+    {
+      "name": "Ethereum Mainnet",
+      "chainId": "0x534e5f4d41494e",
+      "rpcUrl": "https://alpha-mainnet.starknet.io",
+      "accountImplementation": "0x01bd7ca87f139693e6681be2042194cf631c4e8d77027bf0ea9e6d55fc6018ac",
+      "accountClassHash": ""
+    },
+    {
+      "name": "Goerli Testnet",
+      "chainId": "0x534e5f474f45524c49",
+      "rpcUrl": "https://alpha4.starknet.io",
+      "accountImplementation": "",
+      "accountClassHash": "0x3e327de1c40540b98d05cbcb13552008e36f0ec8d61d46956d2f9752c294328"
+    }
+  ],
+  "transactions": [
+    {
+      "txnHash": "0x3a33625b05da00cf7f6d5e9aa19e7070595c0179dd785c3a20efb6677553d79",
+      "txnType": "DEPLOY",
+      "chainId": "0x534e5f4d41494e",
+      "senderAddress": "",
+      "contractAddress": "0x171073c22d07b5bc5b2f4e349c0b7ed631c5dfc7d7bbb36daf730c2bddad450",
+      "contractFuncName": "",
+      "contractCallData": [
+        "0x01bd7ca87f139693e6681be2042194cf631c4e8d77027bf0ea9e6d55fc6018ac"
+      ],
+      "timestamp": 1654627298638
+    },
+    {
+      "txnHash": "0x40a693f71f1e9d384e178dbafe5d1d99ccbc6b8fe64b49986a70058c6b68983",
+      "txnType": "DEPLOY",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "",
+      "contractAddress": "0x5ccc9fc2d7ce9e2b0f2cee1a4b898570bb4d03ba23ad6f72f0db971bd04552c",
+      "contractFuncName": "",
+      "contractCallData": [
+        "1758287985645384642592689047925649198321392050007099540447534039060479296296",
+        "215307247182100370520050591091822763712463273430149262739280891880522753123",
+        "2",
+        "214433017177517386601768607712805182095944371543985558536342209553832369657",
+        "0"
+      ],
+      "timestamp": 1654700981407
+    },
+    {
+      "txnHash": "0x53b27ce392b4286d24df2a15f2f6c5e299fdf8f8a141ceca4a226598a055879",
+      "txnType": "INVOKE_FUNCTION",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "0x5ccc9fc2d7ce9e2b0f2cee1a4b898570bb4d03ba23ad6f72f0db971bd04552c",
+      "contractAddress": "0x07394cbe418daa16e42b87ba67372d4ab4a5df0b05c6e554d158458ce245bc10",
+      "contractFuncName": "mint",
+      "contractCallData": [
+        "0x5ccc9fc2d7ce9e2b0f2cee1a4b898570bb4d03ba23ad6f72f0db971bd04552c",
+        "10000000000000000000",
+        "0"
+      ],
+      "timestamp": 1654663126686
+    },
+    {
+      "txnHash": "0x306b22c65d9da53fdec9ffdacbf23611554e1af61d1b2ae4fae18153178c05c",
+      "txnType": "INVOKE_FUNCTION",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "0x5ccc9fc2d7ce9e2b0f2cee1a4b898570bb4d03ba23ad6f72f0db971bd04552c",
+      "contractAddress": "0x07394cbe418daa16e42b87ba67372d4ab4a5df0b05c6e554d158458ce245bc10",
+      "contractFuncName": "transfer",
+      "contractCallData": [
+        "0x0256d8f49882cc9366037415f48fa9fd2b5b7344ded7573ebfcef7c90e3e6b75",
+        "4000000000000000000",
+        "0"
+      ],
+      "timestamp": 1654669742916
+    },
+    {
+      "txnHash": "0x4a9ad8ff67c7fd9f86bff8d978354a140bf733e0cfe8c0a36ee59d7e0481b5",
+      "txnType": "INVOKE_FUNCTION",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "0x5ccc9fc2d7ce9e2b0f2cee1a4b898570bb4d03ba23ad6f72f0db971bd04552c",
+      "contractAddress": "0x07394cbe418daa16e42b87ba67372d4ab4a5df0b05c6e554d158458ce245bc10",
+      "contractFuncName": "transfer",
+      "contractCallData": [
+        "0x0256d8f49882cc9366037415f48fa9fd2b5b7344ded7573ebfcef7c90e3e6b75",
+        "4000000000000000000",
+        "0"
+      ],
+      "timestamp": 1654670642748
+    },
+    {
+      "txnHash": "0x2b16c4989c0fa7baf91082e4d4af6f82d3111c86a4265bc8a2889401099cd3d",
+      "txnType": "INVOKE_FUNCTION",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "0x5ccc9fc2d7ce9e2b0f2cee1a4b898570bb4d03ba23ad6f72f0db971bd04552c",
+      "contractAddress": "0x07394cbe418daa16e42b87ba67372d4ab4a5df0b05c6e554d158458ce245bc10",
+      "contractFuncName": "transfer",
+      "contractCallData": [
+        "0x0256d8f49882cc9366037415f48fa9fd2b5b7344ded7573ebfcef7c90e3e6b75",
+        "4000000000000000000",
+        "0"
+      ],
+      "timestamp": 1654670871418
+    },
+    {
+      "txnHash": "0x81fab4268648483028b9be3353d6551ca35041fb2a03c2f372b19f3ab109b1",
+      "txnType": "INVOKE_FUNCTION",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "0x5ccc9fc2d7ce9e2b0f2cee1a4b898570bb4d03ba23ad6f72f0db971bd04552c",
+      "contractAddress": "0x07394cbe418daa16e42b87ba67372d4ab4a5df0b05c6e554d158458ce245bc10",
+      "contractFuncName": "transfer",
+      "contractCallData": [
+        "0x0256d8f49882cc9366037415f48fa9fd2b5b7344ded7573ebfcef7c90e3e6b75",
+        "1000000000000000000",
+        "0"
+      ],
+      "timestamp": 1654678514561
+    },
+    {
+      "txnHash": "0x6fc84f6d617f9f31e6acf117d1450ca7a6c1d6e5bc1fd3d10e6e01542391cb7",
+      "txnType": "DEPLOY",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "",
+      "contractAddress": "0x14361d05e560796ad3152e083b609f5205f3bd76039327326746ba7f769a666",
+      "contractFuncName": "",
+      "contractCallData": [
+        "1758287985645384642592689047925649198321392050007099540447534039060479296296",
+        "215307247182100370520050591091822763712463273430149262739280891880522753123",
+        "2",
+        "556795123154112010575661174342658969455926094433687203417108564425692295256",
+        "0"
+      ],
+      "timestamp": 1654701044934
+    },
+    {
+      "txnHash": "0x58b04d593d8f7e7166e16d15a67f843fb02c5d17a77aae74e8baf42cd017070",
+      "txnType": "INVOKE_FUNCTION",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "0x5ccc9fc2d7ce9e2b0f2cee1a4b898570bb4d03ba23ad6f72f0db971bd04552c",
+      "contractAddress": "0x07394cbe418daa16e42b87ba67372d4ab4a5df0b05c6e554d158458ce245bc10",
+      "contractFuncName": "transfer",
+      "contractCallData": [
+        "0x14361d05e560796ad3152e083b609f5205f3bd76039327326746ba7f769a666",
+        "2000000000000000000",
+        "0"
+      ],
+      "timestamp": 1654701529616
+    },
+    {
+      "txnHash": "0x5862757d8c2be632dd32f259e07a07025e64832e6b10bdcf3a0b86b4e499994",
+      "txnType": "INVOKE_FUNCTION",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "0x14361d05e560796ad3152e083b609f5205f3bd76039327326746ba7f769a666",
+      "contractAddress": "0x07394cbe418daa16e42b87ba67372d4ab4a5df0b05c6e554d158458ce245bc10",
+      "contractFuncName": "transfer",
+      "contractCallData": [
+        "0x5ccc9fc2d7ce9e2b0f2cee1a4b898570bb4d03ba23ad6f72f0db971bd04552c",
+        "1000000000000000000",
+        "0"
+      ],
+      "timestamp": 1654706175274
+    },
+    {
+      "txnHash": "0x506e512e0725246352fc8872b75a3a48cc51b423b3e3c65dba589f31926508d",
+      "txnType": "INVOKE_FUNCTION",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "0x14361d05e560796ad3152e083b609f5205f3bd76039327326746ba7f769a666",
+      "contractAddress": "0x07394cbe418daa16e42b87ba67372d4ab4a5df0b05c6e554d158458ce245bc10",
+      "contractFuncName": "transfer",
+      "contractCallData": [
+        "0x5ccc9fc2d7ce9e2b0f2cee1a4b898570bb4d03ba23ad6f72f0db971bd04552c",
+        "1000000000000000000",
+        "0"
+      ],
+      "timestamp": 1654706578026
+    }
+  ]
+}

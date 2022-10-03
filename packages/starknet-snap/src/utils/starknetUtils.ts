@@ -69,7 +69,7 @@ export const callContract = async (
       entrypoint: contractFuncName,
       calldata: contractCallData,
     },
-    'latest',
+    //'latest',
   );
 };
 
@@ -80,8 +80,9 @@ export const estimateFee = async (
   txnInvocation: Call | Call[],
 ): Promise<EstimateFee> => {
   const provider = getProvider(network);
+  console.log(`**** chainId: ${provider.chainId} ****`);
   const account = new Account(provider, senderAddress, senderKeyPair);
-  return account.estimateFee(txnInvocation, { blockIdentifier: 'latest' });
+  return account.estimateFee(txnInvocation); //, { blockIdentifier: 'latest' });
 };
 
 export const executeTxn = async (
@@ -92,6 +93,7 @@ export const executeTxn = async (
   maxFee: number.BigNumberish,
 ): Promise<InvokeFunctionResponse> => {
   const provider = getProvider(network);
+  console.log(`**** chainId: ${provider.chainId} ****`);
   const account = new Account(provider, senderAddress, senderKeyPair);
   return account.execute(txnInvocation, undefined, {
     maxFee,

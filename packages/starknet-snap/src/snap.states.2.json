@@ -1,0 +1,106 @@
+{
+  "accContracts": [
+    {
+      "addressSalt": "0x795d62a9896b221af17bedd8cceb8d963ac6864857d7476e2f8c03ba0c5df9",
+      "publicKey": "0x795d62a9896b221af17bedd8cceb8d963ac6864857d7476e2f8c03ba0c5df9",
+      "address": "0x47a444f5de0cf7d1c620d171e04d3ef759a20ca2ebfab4903279239e285d875",
+      "addressIndex": 0,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "chainId": "0x534e5f474f45524c49",
+      "accountImplementation": "0x070a61892f03b34f88894f0fb9bb4ae0c63a53f5042f79997862d1dffb8d6a30"
+    },
+    {
+      "addressSalt": "0x795d62a9896b221af17bedd8cceb8d963ac6864857d7476e2f8c03ba0c5df9",
+      "publicKey": "0x795d62a9896b221af17bedd8cceb8d963ac6864857d7476e2f8c03ba0c5df9",
+      "address": "0x47dea2843decd1aa28d47df5a535a7f6ab92904cca25eda560d32021164a590",
+      "addressIndex": 0,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "0x2a5c1c4acdaf975a13870f792ef09db3bb71fc7ba7f7b828a2c17131f8c575d",
+      "chainId": "0x534e5f4d41494e"
+    },
+    {
+      "addressSalt": "0x013b2286f46b257f3bcfa2e7d5d9c1e736f48704de39d26095af842746663058",
+      "publicKey": "0x013b2286f46b257f3bcfa2e7d5d9c1e736f48704de39d26095af842746663058",
+      "address": "0x3c74d0e8f3e59b26ff0f73ad11a74fd5e53feef13cb56cc848a995759b0b341",
+      "addressIndex": 1,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "0x44d5e4add6d8a0164949c69dfc9e7c127ef4a30e4c1f589ae72ead55eef2b3c",
+      "chainId": "0x534e5f474f45524c49"
+    },
+    {
+      "addressSalt": "0x013b2286f46b257f3bcfa2e7d5d9c1e736f48704de39d26095af842746663058",
+      "publicKey": "",
+      "address": "0x2c216198604df758a4d8e733e0c908e0c64571532a21fec536699d774f2709b",
+      "addressIndex": 1,
+      "derivationPath": "m / bip32:44' / bip32:9004' / bip32:0' / bip32:0",
+      "deployTxnHash": "",
+      "accountImplementation": "0x070a61892f03b34f88894f0fb9bb4ae0c63a53f5042f79997862d1dffb8d6a30",
+      "chainId": "0x534e5f474f45524c49"
+    }
+  ],
+  "erc20Tokens": [],
+  "networks": [
+    {
+      "name": "Ethereum Mainnet",
+      "chainId": "0x534e5f4d41494e",
+      "rpcUrl": "https://alpha-mainnet.starknet.io",
+      "accountImplementation": "0x01bd7ca87f139693e6681be2042194cf631c4e8d77027bf0ea9e6d55fc6018ac"
+    },
+    {
+      "name": "Goerli Testnet",
+      "chainId": "0x534e5f474f45524c49",
+      "rpcUrl": "https://alpha4.starknet.io",
+      "accountImplementation": "0x070a61892f03b34f88894f0fb9bb4ae0c63a53f5042f79997862d1dffb8d6a30"
+    }
+  ],
+  "transactions": [
+    {
+      "txnHash": "0x566eb79305fc4980a0e73c0cec1d805db0893ed62d3855ac18b5905036fb96c",
+      "txnType": "DEPLOY",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "",
+      "contractAddress": "0x47a444f5de0cf7d1c620d171e04d3ef759a20ca2ebfab4903279239e285d875",
+      "contractFuncName": "",
+      "contractCallData": [
+        "0x070a61892f03b34f88894f0fb9bb4ae0c63a53f5042f79997862d1dffb8d6a30"
+      ],
+      "timestamp": 1654604426211
+    },
+    {
+      "txnHash": "0x2a5c1c4acdaf975a13870f792ef09db3bb71fc7ba7f7b828a2c17131f8c575d",
+      "txnType": "DEPLOY",
+      "chainId": "0x534e5f4d41494e",
+      "senderAddress": "",
+      "contractAddress": "0x47dea2843decd1aa28d47df5a535a7f6ab92904cca25eda560d32021164a590",
+      "contractFuncName": "",
+      "contractCallData": [
+        "0x01bd7ca87f139693e6681be2042194cf631c4e8d77027bf0ea9e6d55fc6018ac"
+      ],
+      "timestamp": 1654604844093
+    },
+    {
+      "txnHash": "0x64e182a75d83c852bfcd1c90ca8aba28175a019992e98cf8974f5290d3543bc",
+      "txnType": "INVOKE_FUNCTION",
+      "chainId": "0x534e5f4d41494e",
+      "senderAddress": "",
+      "contractAddress": "0x47dea2843decd1aa28d47df5a535a7f6ab92904cca25eda560d32021164a590",
+      "contractFuncName": "initialize",
+      "contractCallData": [
+        "0x795d62a9896b221af17bedd8cceb8d963ac6864857d7476e2f8c03ba0c5df9",
+        "0x0"
+      ],
+      "timestamp": 1654605335377
+    },
+    {
+      "txnHash": "0x44d5e4add6d8a0164949c69dfc9e7c127ef4a30e4c1f589ae72ead55eef2b3c",
+      "txnType": "DEPLOY",
+      "chainId": "0x534e5f474f45524c49",
+      "senderAddress": "",
+      "contractAddress": "0x3c74d0e8f3e59b26ff0f73ad11a74fd5e53feef13cb56cc848a995759b0b341",
+      "contractFuncName": "",
+      "contractCallData": [],
+      "timestamp": 1654608649063
+    }
+  ]
+}
