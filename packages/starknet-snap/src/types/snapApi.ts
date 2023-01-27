@@ -5,7 +5,7 @@ export interface ApiParams {
   state: SnapState;
   requestParams: ApiRequestParams;
   saveMutex: Mutex;
-  wallet;
+  snap;
   keyDeriver?;
 }
 

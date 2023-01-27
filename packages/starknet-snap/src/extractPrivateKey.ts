@@ -5,7 +5,7 @@ import { getKeysFromAddress } from './utils/starknetUtils';
 
 export async function extractPrivateKey(params: ApiParams) {
   try {
-    const { state, wallet, keyDeriver, requestParams } = params;
+    const { state, snap, keyDeriver, requestParams } = params;
     const requestParamsObj = requestParams as ExtractPrivateKeyRequestParams;
     const useOldAccounts = !!requestParamsObj.useOldAccounts;
 
@@ -21,7 +21,7 @@ export async function extractPrivateKey(params: ApiParams) {
       throw new Error(`The given user address is invalid: ${requestParamsObj.userAddress}`);
     }
 
-    const response = await wallet.request({
+    const response = await snap.request({
       method: 'snap_confirm',
       params: [
         {
@@ -35,7 +35,7 @@ export async function extractPrivateKey(params: ApiParams) {
       const network = getNetworkFromChainId(state, requestParamsObj.chainId, useOldAccounts);
       const { privateKey: userPrivateKey } = await getKeysFromAddress(keyDeriver, network, state, userAddress);
 
-      await wallet.request({
+      await snap.request({
         method: 'snap_confirm',
         params: [
           {

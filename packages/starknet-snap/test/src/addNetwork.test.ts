@@ -23,7 +23,7 @@ describe('Test function: addNetwork', function () {
   const apiParams: ApiParams = {
     state,
     requestParams: {},
-    wallet: walletStub,
+    snap: walletStub,
     saveMutex: new Mutex(),
   };
 

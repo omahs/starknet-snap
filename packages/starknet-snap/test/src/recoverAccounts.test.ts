@@ -36,7 +36,7 @@ describe('Test function: recoverAccounts', function () {
   const apiParams: ApiParams = {
     state,
     requestParams: {},
-    wallet: walletStub,
+    snap: walletStub,
     saveMutex: new Mutex(),
   };
 

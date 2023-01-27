@@ -6,10 +6,10 @@ import { validateAndParseAddress } from 'starknet';
 
 export async function signMessage(params: ApiParams) {
   try {
-    const { state, wallet, keyDeriver, requestParams } = params;
+    const { state, snap, keyDeriver, requestParams } = params;
     const requestParamsObj = requestParams as SignMessageRequestParams;
 
-    const response = await wallet.request({
+    const response = await snap.request({
       method: 'snap_confirm',
       params: [
         {

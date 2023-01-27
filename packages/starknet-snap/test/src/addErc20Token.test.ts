@@ -23,7 +23,7 @@ describe('Test function: addErc20Token', function () {
   const apiParams: ApiParams = {
     state,
     requestParams: {},
-    wallet: walletStub,
+    snap: walletStub,
     saveMutex: new Mutex(),
   };
 

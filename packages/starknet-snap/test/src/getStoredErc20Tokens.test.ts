@@ -24,7 +24,7 @@ describe('Test function: getStoredErc20Tokens', function () {
   const apiParams: ApiParams = {
     state,
     requestParams: {},
-    wallet: walletStub,
+    snap: walletStub,
     saveMutex: new Mutex(),
   };
 

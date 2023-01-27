@@ -13,7 +13,7 @@ import { ApiParams, SendTransactionRequestParams } from './types/snapApi';
 
 export async function sendTransaction(params: ApiParams) {
   try {
-    const { state, wallet, saveMutex, keyDeriver, requestParams } = params;
+    const { state, snap, saveMutex, keyDeriver, requestParams } = params;
     const requestParamsObj = requestParams as SendTransactionRequestParams;
 
     if (!requestParamsObj.contractAddress || !requestParamsObj.senderAddress || !requestParamsObj.contractFuncName) {
@@ -58,7 +58,7 @@ export async function sendTransaction(params: ApiParams) {
       maxFee,
       network,
     );
-    const response = await wallet.request({
+    const response = await snap.request({
       method: 'snap_confirm',
       params: [
         {
@@ -101,7 +101,7 @@ export async function sendTransaction(params: ApiParams) {
         timestamp: Math.floor(Date.now() / 1000),
       };
 
-      await upsertTransaction(txn, wallet, saveMutex);
+      await upsertTransaction(txn, snap, saveMutex);
     }
 
     return txnResp;

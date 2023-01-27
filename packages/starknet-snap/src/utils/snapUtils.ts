@@ -206,10 +206,10 @@ export function getAccounts(state: SnapState, chainId: string) {
     .sort((a: AccContract, b: AccContract) => a.addressIndex - b.addressIndex);
 }
 
-export async function upsertAccount(userAccount: AccContract, wallet, mutex: Mutex, state: SnapState = undefined) {
+export async function upsertAccount(userAccount: AccContract, snap, mutex: Mutex, state: SnapState = undefined) {
   return mutex.runExclusive(async () => {
     if (!state) {
-      state = await wallet.request({
+      state = await snap.request({
         method: 'snap_manageState',
         params: ['get'],
       });
@@ -235,7 +235,7 @@ export async function upsertAccount(userAccount: AccContract, wallet, mutex: Mut
       storedAccount.deployTxnHash = userAccount.deployTxnHash || storedAccount.deployTxnHash;
     }
 
-    await wallet.request({
+    await snap.request({
       method: 'snap_manageState',
       params: ['update', state],
     });
@@ -252,10 +252,10 @@ export function getNetworks(state: SnapState) {
   return state.networks;
 }
 
-export async function upsertNetwork(network: Network, wallet, mutex: Mutex, state: SnapState = undefined) {
+export async function upsertNetwork(network: Network, snap, mutex: Mutex, state: SnapState = undefined) {
   return mutex.runExclusive(async () => {
     if (!state) {
-      state = await wallet.request({
+      state = await snap.request({
         method: 'snap_manageState',
         params: ['get'],
       });
@@ -282,7 +282,7 @@ export async function upsertNetwork(network: Network, wallet, mutex: Mutex, stat
       storedNetwork.useOldAccounts = !!network.useOldAccounts;
     }
 
-    await wallet.request({
+    await snap.request({
       method: 'snap_manageState',
       params: ['update', state],
     });
@@ -303,10 +303,10 @@ export function getEtherErc20Token(state: SnapState, chainId: string) {
   return state.erc20Tokens?.find((token) => Number(token.chainId) === Number(chainId) && token.symbol === 'ETH');
 }
 
-export async function upsertErc20Token(erc20Token: Erc20Token, wallet, mutex: Mutex, state: SnapState = undefined) {
+export async function upsertErc20Token(erc20Token: Erc20Token, snap, mutex: Mutex, state: SnapState = undefined) {
   return mutex.runExclusive(async () => {
     if (!state) {
-      state = await wallet.request({
+      state = await snap.request({
         method: 'snap_manageState',
         params: ['get'],
       });
@@ -332,7 +332,7 @@ export async function upsertErc20Token(erc20Token: Erc20Token, wallet, mutex: Mu
       storedErc20Token.decimals = erc20Token.decimals;
     }
 
-    await wallet.request({
+    await snap.request({
       method: 'snap_manageState',
       params: ['update', state],
     });
@@ -410,10 +410,10 @@ export function getTransactions(
   return filteredTxns;
 }
 
-export async function upsertTransaction(txn: Transaction, wallet, mutex: Mutex, state: SnapState = undefined) {
+export async function upsertTransaction(txn: Transaction, snap, mutex: Mutex, state: SnapState = undefined) {
   return mutex.runExclusive(async () => {
     if (!state) {
-      state = await wallet.request({
+      state = await snap.request({
         method: 'snap_manageState',
         params: ['get'],
       });
@@ -437,17 +437,17 @@ export async function upsertTransaction(txn: Transaction, wallet, mutex: Mutex, 
       storedTxn.timestamp = txn.timestamp;
     }
 
-    await wallet.request({
+    await snap.request({
       method: 'snap_manageState',
       params: ['update', state],
     });
   });
 }
 
-export async function upsertTransactions(txns: Transaction[], wallet, mutex: Mutex, state: SnapState = undefined) {
+export async function upsertTransactions(txns: Transaction[], snap, mutex: Mutex, state: SnapState = undefined) {
   return mutex.runExclusive(async () => {
     if (!state) {
-      state = await wallet.request({
+      state = await snap.request({
         method: 'snap_manageState',
         params: ['get'],
       });
@@ -467,7 +467,7 @@ export async function upsertTransactions(txns: Transaction[], wallet, mutex: Mut
       }
     });
 
-    await wallet.request({
+    await snap.request({
       method: 'snap_manageState',
       params: ['update', state],
     });
@@ -476,13 +476,13 @@ export async function upsertTransactions(txns: Transaction[], wallet, mutex: Mut
 
 export async function removeAcceptedTransaction(
   minTimeStamp: number,
-  wallet,
+  snap,
   mutex: Mutex,
   state: SnapState = undefined,
 ) {
   return mutex.runExclusive(async () => {
     if (!state) {
-      state = await wallet.request({
+      state = await snap.request({
         method: 'snap_manageState',
         params: ['get'],
       });
@@ -493,7 +493,7 @@ export async function removeAcceptedTransaction(
         (txn.status !== TransactionStatus.ACCEPTED_ON_L2 && txn.status !== TransactionStatus.ACCEPTED_ON_L1) ||
         (txn.status === TransactionStatus.ACCEPTED_ON_L2 && txn.timestamp * 1000 >= minTimeStamp),
     );
-    await wallet.request({
+    await snap.request({
       method: 'snap_manageState',
       params: ['update', state],
     });

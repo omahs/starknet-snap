@@ -2,8 +2,8 @@ import { getBIP44AddressKeyDeriver } from '@metamask/key-tree';
 import { number, encode, ec } from 'starknet';
 import { utils } from 'ethers';
 
-export async function getAddressKeyDeriver(wallet) {
-  const bip44Node = await wallet.request({
+export async function getAddressKeyDeriver(snap) {
+  const bip44Node = await snap.request({
     method: 'snap_getBip44Entropy',
     params: {
       coinType: 9004,

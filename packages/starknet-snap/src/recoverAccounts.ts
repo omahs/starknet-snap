@@ -6,7 +6,7 @@ import { ApiParams, RecoverAccountsRequestParams } from './types/snapApi';
 
 export async function recoverAccounts(params: ApiParams) {
   try {
-    const { state, wallet, saveMutex, keyDeriver, requestParams } = params;
+    const { state, snap, saveMutex, keyDeriver, requestParams } = params;
     const requestParamsObj = requestParams as RecoverAccountsRequestParams;
 
     const startIndex = getValidNumber(requestParamsObj.startScanIndex, 0, 0);
@@ -20,7 +20,7 @@ export async function recoverAccounts(params: ApiParams) {
     );
 
     if (!network.accountClassHash) {
-      await wallet.request({
+      await snap.request({
         method: 'snap_confirm',
         params: [
           {
@@ -78,7 +78,7 @@ export async function recoverAccounts(params: ApiParams) {
 
       console.log(`recoverAccounts: index ${i}\nuserAccount: ${JSON.stringify(userAccount)}`);
 
-      await upsertAccount(userAccount, wallet, saveMutex);
+      await upsertAccount(userAccount, snap, saveMutex);
 
       scannedAccounts.push(userAccount);
       i++;

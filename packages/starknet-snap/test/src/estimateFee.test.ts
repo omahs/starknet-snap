@@ -32,7 +32,7 @@ describe('Test function: estimateFee', function () {
   const apiParams: ApiParams = {
     state,
     requestParams: requestObject,
-    wallet: walletStub,
+    snap: walletStub,
     saveMutex: new Mutex(),
   };
 
