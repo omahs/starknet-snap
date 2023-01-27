@@ -339,9 +339,10 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {
+          snapId, request: {
           method: 'ping'
-        }]
+        }}
       })
       alert(response);
     } catch (err) {
@@ -361,7 +362,7 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_getErc20TokenBalance',
           params: {
             tokenAddress,
@@ -369,7 +370,7 @@
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
 
       console.log(`response: ${response}`);
@@ -392,7 +393,7 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_estimateFee',
           params: {
             contractAddress,
@@ -402,7 +403,7 @@
             chainId,
             ...getReqFlagsFromCheckbox(),
           }
-        }]
+        }}
       })
 
       console.log(`response: ${response}`);
@@ -426,7 +427,7 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_sendTransaction',
           params: {
             contractAddress: erc20Address,
@@ -437,7 +438,7 @@
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
 
       console.log(`response: ${response}`);
@@ -456,13 +457,13 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_getStoredUserAccounts',
           params: {
             chainId,
             ...getReqFlagsFromCheckbox()
           },
-        }]
+        }}
       })
       alert(JSON.stringify(response));
     } catch (err) {
@@ -481,14 +482,14 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_getTransactionStatus',
           params: {
             transactionHash,
             chainId,
             ...getReqFlagsFromCheckbox(), 
           },
-        }]
+        }}
       })
     } catch (err) {
       console.error(err)
@@ -506,14 +507,14 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_createAccount',
           params: {
             addressIndex,
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
     } catch (err) {
       console.error(err)
@@ -531,14 +532,14 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_extractPrivateKey',
           params: {
             userAddress,
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
     } catch (err) {
       console.error(err)
@@ -556,14 +557,14 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_extractPublicKey',
           params: {
             userAddress,
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
     } catch (err) {
       console.error(err)
@@ -582,7 +583,7 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_signMessage',
           params: {
             typedDataMessage,
@@ -590,7 +591,7 @@
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
     } catch (err) {
       console.error(err)
@@ -610,7 +611,7 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_verifySignedMessage',
           params: {
             typedDataMessage,
@@ -619,7 +620,7 @@
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
     } catch (err) {
       console.error(err)
@@ -640,7 +641,7 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_addErc20Token',
           params: {
             tokenAddress,
@@ -650,7 +651,7 @@
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
     } catch (err) {
       console.error(err)
@@ -667,13 +668,13 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_getStoredErc20Tokens',
           params: {
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
     } catch (err) {
       console.error(err)
@@ -695,7 +696,7 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_sendTransaction',
           params: {
             contractAddress,
@@ -706,7 +707,7 @@
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
 
       console.log(`response: ${response}`);
@@ -728,7 +729,7 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_getValue',
           params: {
             contractAddress,
@@ -737,7 +738,7 @@
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
 
       console.log(`response: ${response}`);
@@ -761,7 +762,7 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_addNetwork',
           params: {
             networkName,
@@ -772,7 +773,7 @@
             accountClassHash,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
     } catch (err) {
       console.error(err)
@@ -787,10 +788,10 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_getStoredNetworks',
           params: {},
-        }]
+        }}
       })
       alert(JSON.stringify(response));
     } catch (err) {
@@ -812,7 +813,7 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_getStoredTransactions',
           params: {
             senderAddress,
@@ -822,7 +823,7 @@
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
     } catch (err) {
       console.error(err)
@@ -845,7 +846,7 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_getTransactions',
           params: {
             senderAddress,
@@ -857,7 +858,7 @@
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
     } catch (err) {
       console.error(err)
@@ -877,7 +878,7 @@
     try {
       const response = await ethereum.request({
         method: 'wallet_invokeSnap',
-        params: [snapId, {
+        params: {snapId, request: {
           method: 'starkNet_recoverAccounts',
           params: {
             startScanIndex,
@@ -886,7 +887,7 @@
             chainId,
             ...getReqFlagsFromCheckbox(),
           },
-        }]
+        }}
       })
     } catch (err) {
       console.error(err)

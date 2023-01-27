@@ -211,7 +211,7 @@ export async function upsertAccount(userAccount: AccContract, snap, mutex: Mutex
     if (!state) {
       state = await snap.request({
         method: 'snap_manageState',
-        params: ['get'],
+        params: { operation: 'get' },
       });
     }
 
@@ -237,7 +237,7 @@ export async function upsertAccount(userAccount: AccContract, snap, mutex: Mutex
 
     await snap.request({
       method: 'snap_manageState',
-      params: ['update', state],
+      params: { operation: 'update', newState: state },
     });
   });
 }
@@ -257,7 +257,7 @@ export async function upsertNetwork(network: Network, snap, mutex: Mutex, state:
     if (!state) {
       state = await snap.request({
         method: 'snap_manageState',
-        params: ['get'],
+        params: { operation: 'get' },
       });
     }
 
@@ -284,7 +284,7 @@ export async function upsertNetwork(network: Network, snap, mutex: Mutex, state:
 
     await snap.request({
       method: 'snap_manageState',
-      params: ['update', state],
+      params: { operation: 'update', newState: state },
     });
   });
 }
@@ -308,7 +308,7 @@ export async function upsertErc20Token(erc20Token: Erc20Token, snap, mutex: Mute
     if (!state) {
       state = await snap.request({
         method: 'snap_manageState',
-        params: ['get'],
+        params: { operation: 'get' },
       });
     }
 
@@ -334,7 +334,7 @@ export async function upsertErc20Token(erc20Token: Erc20Token, snap, mutex: Mute
 
     await snap.request({
       method: 'snap_manageState',
-      params: ['update', state],
+      params: { operation: 'update', newState: state },
     });
   });
 }
@@ -415,7 +415,7 @@ export async function upsertTransaction(txn: Transaction, snap, mutex: Mutex, st
     if (!state) {
       state = await snap.request({
         method: 'snap_manageState',
-        params: ['get'],
+        params: { operation: 'get' },
       });
     }
 
@@ -439,7 +439,7 @@ export async function upsertTransaction(txn: Transaction, snap, mutex: Mutex, st
 
     await snap.request({
       method: 'snap_manageState',
-      params: ['update', state],
+      params: { operation: 'update', newState: state },
     });
   });
 }
@@ -449,7 +449,7 @@ export async function upsertTransactions(txns: Transaction[], snap, mutex: Mutex
     if (!state) {
       state = await snap.request({
         method: 'snap_manageState',
-        params: ['get'],
+        params: { operation: 'get' },
       });
     }
 
@@ -469,7 +469,7 @@ export async function upsertTransactions(txns: Transaction[], snap, mutex: Mutex
 
     await snap.request({
       method: 'snap_manageState',
-      params: ['update', state],
+      params: { operation: 'update', newState: state },
     });
   });
 }
@@ -484,7 +484,7 @@ export async function removeAcceptedTransaction(
     if (!state) {
       state = await snap.request({
         method: 'snap_manageState',
-        params: ['get'],
+        params: { operation: 'get' },
       });
     }
 
@@ -495,7 +495,7 @@ export async function removeAcceptedTransaction(
     );
     await snap.request({
       method: 'snap_manageState',
-      params: ['update', state],
+      params: { operation: 'update', newState: state },
     });
   });
 }

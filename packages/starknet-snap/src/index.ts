@@ -48,7 +48,7 @@ export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => 
 
   let state: SnapState = await snap.request({
     method: 'snap_manageState',
-    params: ['get'],
+    params: { operation: 'get' },
   });
 
   if (!state) {
@@ -61,7 +61,7 @@ export const onRpcRequest: OnRpcRequestHandler = async ({ origin, request }) => 
     // initialize state if empty and set default data
     await snap.request({
       method: 'snap_manageState',
-      params: ['update', state],
+      params: { operation: 'update', newState: state },
     });
   }
 
