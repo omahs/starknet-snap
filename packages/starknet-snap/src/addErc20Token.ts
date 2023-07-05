@@ -7,6 +7,8 @@ import {
   validateAddErc20TokenParams,
 } from './utils/snapUtils';
 import { DEFAULT_DECIMAL_PLACES } from './utils/constants';
+import { DialogType } from '@metamask/rpc-methods';
+import { heading, panel, text } from '@metamask/snaps-ui';
 
 export async function addErc20Token(params: ApiParams) {
   try {
@@ -28,6 +30,15 @@ export async function addErc20Token(params: ApiParams) {
     const tokenDecimals = getValidNumber(requestParamsObj.tokenDecimals, DEFAULT_DECIMAL_PLACES, 0);
 
     validateAddErc20TokenParams(requestParamsObj, network);
+
+    const response = await wallet.request({
+      method: 'snap_dialog',
+      params: {
+        type: DialogType.Confirmation,
+        content: panel([heading(`Do you want to add this Token "{tokenName}"?`), text(`${JSON.stringify(requestParamsObj)}`)]),
+      },
+    });
+    if (!response) return false;
 
     const erc20Token: Erc20Token = {
       address: tokenAddress,
