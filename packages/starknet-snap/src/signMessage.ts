@@ -36,7 +36,11 @@ export async function signMessage(params: ApiParams) {
       method: 'snap_dialog',
       params: {
         type: DialogType.Confirmation,
-        content: panel([heading('Do you want to sign this message ?'), text(JSON.stringify(typedDataMessage))]),
+        content: panel([
+          heading('Do you want to sign this message ?'), 
+          text(JSON.stringify(typedDataMessage)),
+          text(`Signer address: ${signerAddress}`)
+        ]),
       },
     });
     if (!response) return false;
