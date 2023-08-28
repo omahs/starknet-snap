@@ -19,4 +19,5 @@ jobs:
 
       - name: check id
         run: |
-          aws sts get-caller-identity --query "Account"
+          id="$(aws sts get-caller-identity | grep Account | awk -F'"' '{ print $4}')"
+          echo "$id"
