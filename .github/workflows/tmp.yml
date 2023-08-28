@@ -1,5 +1,8 @@
 name: Tmp
 
+on:
+  push:
+
 jobs:
   deploy:
     name: Tmp
