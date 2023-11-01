@@ -207,9 +207,9 @@ describe('Test function: createAccount', function () {
     const requestObject: CreateAccountRequestParams = { deploy: true };
     apiParams.requestParams = requestObject;
     const result = await createAccount(apiParams);
-    expect(walletStub.rpcStubs.snap_manageState).to.have.been.callCount(4);
+    expect(walletStub.rpcStubs.snap_manageState).to.have.been.callCount(0);
     expect(result.address).to.be.eq(createAccountProxyResp.contract_address);
-    expect(result.transaction_hash).to.be.eq(createAccountProxyResp.transaction_hash);
+    expect(result.transaction_hash).to.be.eq(null);
     expect(state.accContracts.length).to.be.eq(3);
     expect(state.transactions.length).to.be.eq(3);
   });
@@ -227,10 +227,17 @@ describe('Test function: createAccount', function () {
     });
     const requestObject: CreateAccountRequestParams = { deploy: true };
     apiParams.requestParams = requestObject;
-    const result = await createAccount(apiParams);
-    expect(walletStub.rpcStubs.snap_manageState).to.have.been.callCount(3);
-    expect(result.address).to.be.eq(createAccountProxyResp.contract_address);
-    expect(result.transaction_hash).to.be.eq(createAccountProxyResp.transaction_hash);
+
+    let result;
+    try {
+      result = await createAccount(apiParams);
+    } catch (err) {
+      result = err;
+    } finally {
+      expect(result).to.be.an('Error');
+    }
+
+    expect(walletStub.rpcStubs.snap_manageState).to.have.been.callCount(0);
     expect(state.accContracts.length).to.be.eq(3);
     expect(state.transactions.length).to.be.eq(3);
   });
@@ -248,10 +255,17 @@ describe('Test function: createAccount', function () {
     });
     const requestObject: CreateAccountRequestParams = { deploy: true };
     apiParams.requestParams = requestObject;
-    const result = await createAccount(apiParams);
-    expect(walletStub.rpcStubs.snap_manageState).to.have.been.callCount(3);
-    expect(result.address).to.be.eq(createAccountProxyResp.contract_address);
-    expect(result.transaction_hash).to.be.eq(createAccountProxyResp.transaction_hash);
+
+    let result;
+    try {
+      result = await createAccount(apiParams, true);
+    } catch (err) {
+      result = err;
+    } finally {
+      expect(result).to.be.an('Error');
+    }
+
+    expect(walletStub.rpcStubs.snap_manageState).to.have.been.callCount(0);
     expect(state.accContracts.length).to.be.eq(3);
     expect(state.transactions.length).to.be.eq(3);
   });
@@ -267,10 +281,17 @@ describe('Test function: createAccount', function () {
     });
     const requestObject: CreateAccountRequestParams = { deploy: true };
     apiParams.requestParams = requestObject;
-    const result = await createAccount(apiParams);
-    expect(walletStub.rpcStubs.snap_manageState).to.have.been.callCount(3);
-    expect(result.address).to.be.eq(createAccountProxyResp.contract_address);
-    expect(result.transaction_hash).to.be.eq(createAccountProxyResp.transaction_hash);
+
+    let result;
+    try {
+      result = await createAccount(apiParams, true);
+    } catch (err) {
+      result = err;
+    } finally {
+      expect(result).to.be.an('Error');
+    }
+
+    expect(walletStub.rpcStubs.snap_manageState).to.have.been.callCount(0);
     expect(state.accContracts.length).to.be.eq(3);
     expect(state.transactions.length).to.be.eq(3);
   });
@@ -280,6 +301,9 @@ describe('Test function: createAccount', function () {
       return createAccountFailedProxyResp;
     });
     sandbox.stub(utils, 'getSigner').throws(new Error());
+    sandbox.stub(utils, 'callContract').callsFake(async () => {
+      return getBalanceResp;
+    });
     sandbox.stub(utils, 'estimateAccountDeployFee').callsFake(async () => {
       return estimateDeployFeeResp;
     });
@@ -297,6 +321,9 @@ describe('Test function: createAccount', function () {
     sandbox.stub(snapUtils, 'upsertAccount').throws(new Error());
     sandbox.stub(utils, 'deployAccount').callsFake(async () => {
       return createAccountProxyResp;
+    });
+    sandbox.stub(utils, 'callContract').callsFake(async () => {
+      return getBalanceResp;
     });
     sandbox.stub(utils, 'getSigner').throws(new Error());
     sandbox.stub(utils, 'estimateAccountDeployFee').callsFake(async () => {

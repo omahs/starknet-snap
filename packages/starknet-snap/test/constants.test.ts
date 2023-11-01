@@ -122,6 +122,11 @@ export const createAccountProxyMainnetResp2 = {
 
 export const createAccountProxyResp = {
   transaction_hash: '0x3b690b4c9dd639881a46f6a344ee90254562175ed7a7f5a028f69b8c32ccb47',
+  contract_address: '0x0353c982282cb6dea5afc3db185910d6967c1dac6b813bcc6981e6438ea290dd',
+};
+
+export const createAccountProxyResp2 = {
+  transaction_hash: '0x3b690b4c9dd639881a46f6a344ee90254562175ed7a7f5a028f69b8c32ccb47',
   contract_address: '0x4b36a2b0a1e9d2af3416914798de776e37d9e0ab9a50d2dec30485dca64bb8',
 };
 

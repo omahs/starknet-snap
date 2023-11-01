@@ -516,6 +516,25 @@ export async function upsertTransactions(txns: Transaction[], wallet, mutex: Mut
   });
 }
 
+export function buildDeployTxn(network: Network, txnHash: string, contractAddress: string, failureReason?: string) {
+  const txn: Transaction = {
+    txnHash,
+    txnType: VoyagerTransactionType.DEPLOY_ACCOUNT,
+    chainId: network.chainId,
+    senderAddress: contractAddress,
+    contractAddress: contractAddress,
+    contractFuncName: '',
+    contractCallData: [],
+    finalityStatus: TransactionStatus.RECEIVED,
+    executionStatus: TransactionStatus.RECEIVED,
+    status: '',
+    failureReason,
+    eventIds: [],
+    timestamp: Math.floor(Date.now() / 1000),
+  };
+  return txn;
+}
+
 export async function removeAcceptedTransaction(
   minTimeStamp: number,
   wallet,

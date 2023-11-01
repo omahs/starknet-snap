@@ -15,20 +15,24 @@ import {
   DeployContractResponse,
   InvokeFunctionResponse,
   EstimateFee,
+  DeclareContractResponse,
+  DeclareContractPayload,
   RawCalldata,
   CallContractResponse,
   ProviderOptions,
   GetTransactionResponse,
   Invocations,
+  InvocationsDetails,
   validateAndParseAddress as _validateAndParseAddress,
 } from 'starknet';
 import type { Hex } from '@noble/curves/abstract/utils';
 import { Network, SnapState, Transaction, TransactionType } from '../types/snapState';
-import { PROXY_CONTRACT_HASH, TRANSFER_SELECTOR_HEX } from './constants';
+import { PROXY_CONTRACT_HASH, TRANSFER_SELECTOR_HEX, ETHER_MAINNET, ETHER_TESTNET } from './constants';
 import { getAddressKey } from './keyPair';
 import { getAccount, getAccounts, getTransactionFromVoyagerUrl, getTransactionsFromVoyagerUrl } from './snapUtils';
 import { logger } from './logger';
 import { RpcV4GetTransactionReceiptResponse } from '../types/snapApi';
+import { ethers } from 'ethers';
 
 export const getCallDataArray = (callDataStr: string): string[] => {
   return (callDataStr ?? '')
@@ -71,6 +75,18 @@ export const callContract = async (
     },
     'latest',
   );
+};
+
+export const declareContract = async (
+  network: Network,
+  senderAddress: string,
+  privateKey: string | Uint8Array,
+  declareContractPayload: DeclareContractPayload,
+  transactionsDetail?: InvocationsDetails,
+): Promise<DeclareContractResponse> => {
+  const provider = getProvider(network);
+  const account = new Account(provider, senderAddress, privateKey);
+  return account.declareIfNot(declareContractPayload, transactionsDetail);
 };
 
 export const estimateFee = async (
