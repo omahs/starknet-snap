@@ -56,8 +56,8 @@ describe('Test function: estimateFee', function () {
     sandbox.stub(utils, 'getSigner').callsFake(async () => {
       return account2.publicKey;
     });
-    sandbox.stub(utils, 'estimateFee').callsFake(async () => {
-      return estimateFeeResp;
+    sandbox.stub(utils, 'estimateFeeBulk').callsFake(async () => {
+      return [estimateFeeResp];
     });
     // The following will be commented out later when starknet.js
     // supports estimateFeeBulk in rpc mode
@@ -82,8 +82,8 @@ describe('Test function: estimateFee', function () {
     sandbox.stub(utils, 'getSigner').callsFake(async () => {
       return account2.publicKey;
     });
-    sandbox.stub(utils, 'estimateFee').callsFake(async () => {
-      return estimateFeeResp2;
+    sandbox.stub(utils, 'estimateFeeBulk').callsFake(async () => {
+      return [estimateFeeResp2];
     });
     // The following will be commented out later when starknet.js
     // supports estimateFeeBulk in rpc mode

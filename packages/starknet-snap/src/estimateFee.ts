@@ -1,19 +1,11 @@
 import { toJson } from './utils/serializer';
-import { Invocations, TransactionType } from 'starknet';
+import { TransactionType } from 'starknet';
 import { validateAndParseAddress } from '../src/utils/starknetUtils';
 import { ApiParams, EstimateFeeRequestParams } from './types/snapApi';
 import { getNetworkFromChainId } from './utils/snapUtils';
-import {
-  getKeysFromAddress,
-  getCallDataArray,
-  estimateFee as estimateFeeUtil,
-  getAccContractAddressAndCallData,
-  estimateFeeBulk,
-  addFeesFromAllTransactions,
-  isAccountDeployed,
-} from './utils/starknetUtils';
+import { getKeysFromAddress, getCallDataArray } from './utils/starknetUtils';
+import { estimateFeeWIthDeploy } from './utils/transaction';
 
-import { PROXY_CONTRACT_HASH } from './utils/constants';
 import { logger } from './utils/logger';
 
 export async function estimateFee(params: ApiParams) {
@@ -45,12 +37,7 @@ export async function estimateFee(params: ApiParams) {
     const contractCallData = getCallDataArray(requestParamsObj.contractCallData);
     const senderAddress = requestParamsObj.senderAddress;
     const network = getNetworkFromChainId(state, requestParamsObj.chainId);
-    const { privateKey: senderPrivateKey, publicKey } = await getKeysFromAddress(
-      keyDeriver,
-      network,
-      state,
-      senderAddress,
-    );
+    const { privateKey, publicKey } = await getKeysFromAddress(keyDeriver, network, state, senderAddress);
 
     const txnInvocation = {
       contractAddress,
@@ -60,47 +47,18 @@ export async function estimateFee(params: ApiParams) {
 
     logger.log(`estimateFee:\ntxnInvocation: ${toJson(txnInvocation)}`);
 
-    //Estimate deploy account fee if the signer has not been deployed yet
-    const accountDeployed = await isAccountDeployed(network, publicKey);
-    let bulkTransactions: Invocations = [
-      {
-        type: TransactionType.INVOKE,
-        payload: txnInvocation,
-      },
-    ];
-    if (!accountDeployed) {
-      const { callData } = getAccContractAddressAndCallData(network.accountClassHash, publicKey);
-      const deployAccountpayload = {
-        classHash: PROXY_CONTRACT_HASH,
-        contractAddress: senderAddress,
-        constructorCalldata: callData,
-        addressSalt: publicKey,
-      };
-
-      bulkTransactions = [
-        {
-          type: TransactionType.DEPLOY_ACCOUNT,
-          payload: deployAccountpayload,
-        },
+    const { estimateFee: estimateFeeResp, includeDeploy } = await estimateFeeWIthDeploy(
+      network,
+      publicKey,
+      privateKey,
+      senderAddress,
+      [
         {
           type: TransactionType.INVOKE,
           payload: txnInvocation,
         },
-      ];
-    }
-
-    let estimateFeeResp;
-
-    if (accountDeployed) {
-      // This condition branch will be removed later when starknet.js
-      // supports estimateFeeBulk in rpc mode
-      estimateFeeResp = await estimateFeeUtil(network, senderAddress, senderPrivateKey, txnInvocation);
-      logger.log(`estimateFee:\nestimateFeeUtil estimateFeeResp: ${toJson(estimateFeeResp)}`);
-    } else {
-      const estimateBulkFeeResp = await estimateFeeBulk(network, senderAddress, senderPrivateKey, bulkTransactions);
-      logger.log(`estimateFee:\nestimateFeeBulk estimateBulkFeeResp: ${toJson(estimateBulkFeeResp)}`);
-      estimateFeeResp = addFeesFromAllTransactions(estimateBulkFeeResp);
-    }
+      ],
+    );
 
     logger.log(`estimateFee:\nestimateFeeResp: ${toJson(estimateFeeResp)}`);
 
@@ -110,7 +68,7 @@ export async function estimateFee(params: ApiParams) {
       gasConsumed: estimateFeeResp.gas_consumed?.toString(10) ?? '0',
       gasPrice: estimateFeeResp.gas_price?.toString(10) ?? '0',
       unit: 'wei',
-      includeDeploy: !accountDeployed,
+      includeDeploy: includeDeploy,
     };
     logger.log(`estimateFee:\nresp: ${toJson(resp)}`);
 
