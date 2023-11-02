@@ -1,10 +1,15 @@
 import { toJson } from './utils/serializer';
-import { num, constants } from 'starknet';
-import { validateAndParseAddress } from '../src/utils/starknetUtils';
-import { estimateFee } from './estimateFee';
+import { num, constants, TransactionType } from 'starknet';
 import { Transaction, TransactionStatus, VoyagerTransactionType } from './types/snapState';
 import { getNetworkFromChainId, getSigningTxnText, upsertTransaction } from './utils/snapUtils';
-import { getKeysFromAddress, getCallDataArray, executeTxn, isAccountDeployed } from './utils/starknetUtils';
+import {
+  getKeysFromAddress,
+  getCallDataArray,
+  executeTxn,
+  isAccountDeployed,
+  validateAndParseAddress,
+} from './utils/starknetUtils';
+import { estimateFeeWithDeploy } from './utils/transaction';
 import { ApiParams, SendTransactionRequestParams } from './types/snapApi';
 import { createAccount } from './createAccount';
 import { DialogType } from '@metamask/rpc-methods';
@@ -45,11 +50,27 @@ export async function sendTransaction(params: ApiParams) {
       publicKey,
       addressIndex,
     } = await getKeysFromAddress(keyDeriver, network, state, senderAddress);
+    
+    const txnInvocation = {
+      contractAddress,
+      entrypoint: contractFuncName,
+      calldata: contractCallData,
+    };
+
+    logger.log(`sendTransaction:\ntxnInvocation: ${toJson(txnInvocation)}`);
+
     let maxFee = requestParamsObj.maxFee ? num.toBigInt(requestParamsObj.maxFee) : constants.ZERO;
     if (maxFee === constants.ZERO) {
-      const { suggestedMaxFee } = await estimateFee(params);
-      maxFee = num.toBigInt(suggestedMaxFee);
+      const { estimateFee } = await estimateFeeWithDeploy(network, publicKey, senderPrivateKey, senderAddress, [
+        {
+          type: TransactionType.INVOKE,
+          payload: txnInvocation,
+        },
+      ]);
+      maxFee = num.toBigInt(estimateFee.suggestedMaxFee.toString(10));
     }
+
+    logger.log(`sendTransaction:\nmaxFee: ${maxFee.toString()}}`);
 
     const signingTxnComponents = getSigningTxnText(
       state,
@@ -68,14 +89,6 @@ export async function sendTransaction(params: ApiParams) {
       },
     });
     if (!response) return false;
-
-    const txnInvocation = {
-      contractAddress,
-      entrypoint: contractFuncName,
-      calldata: contractCallData,
-    };
-
-    logger.log(`sendTransaction:\ntxnInvocation: ${toJson(txnInvocation)}\nmaxFee: ${maxFee.toString()}}`);
 
     const accountDeployed = await isAccountDeployed(network, publicKey);
     if (!accountDeployed) {

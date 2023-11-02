@@ -15,7 +15,7 @@ import {
 } from './starknetUtils';
 import { Network } from '../types/snapState';
 
-export const estimateFeeWIthDeploy = async (
+export const estimateFeeWithDeploy = async (
   network: Network,
   publicKey: string,
   privateKey: string,

@@ -4,7 +4,7 @@ import { validateAndParseAddress } from '../src/utils/starknetUtils';
 import { ApiParams, EstimateFeeRequestParams } from './types/snapApi';
 import { getNetworkFromChainId } from './utils/snapUtils';
 import { getKeysFromAddress, getCallDataArray } from './utils/starknetUtils';
-import { estimateFeeWIthDeploy } from './utils/transaction';
+import { estimateFeeWithDeploy } from './utils/transaction';
 
 import { logger } from './utils/logger';
 
@@ -47,7 +47,7 @@ export async function estimateFee(params: ApiParams) {
 
     logger.log(`estimateFee:\ntxnInvocation: ${toJson(txnInvocation)}`);
 
-    const { estimateFee: estimateFeeResp, includeDeploy } = await estimateFeeWIthDeploy(
+    const { estimateFee: estimateFeeResp, includeDeploy } = await estimateFeeWithDeploy(
       network,
       publicKey,
       privateKey,
